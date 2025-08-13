@@ -11,3 +11,4 @@ En la presente plataforma, se expondrá, a modo de bitácora, los apuntes y proy
 ### Encargo 02
 "Traer un escrito en base una creación de texto o lenguaje. Por ejemplo algún poema, una cita, un discurso, un chiste, un libro, una propaganda, publicidad, etc."
 
+[Encargo 02 Martín Bravo](https://github.com/Martobrave/taco122-037-bitacora-martobrave/tree/099931e032c9128a295584202248f53a21f6390b/Semana01/Encargo02)
