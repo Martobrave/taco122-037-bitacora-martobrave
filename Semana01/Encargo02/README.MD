@@ -13,8 +13,11 @@ Tractatus logico-philosophicus (1921) del filósofo austriaco Ludwig Wittgenstei
 12/08/2025
 
 "-El león de enamoró de la Oveja.
+
 -Que estúpida oveja.
+
 -Y que masoquista es el león."
+
 Diálogo entre Edward Cullen y Bella Swan, Crepúsculo (2008)
 
-![Scene Crepusculo dialogue](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8WMoZrCOHxUtW9VyN5CBhVaz0IA9Q5VO-QA&s)
+![Scene Crepusculo dialogue](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo7oiSa_079Y73acvdS4A39-4TNT0orYGuyA&s)
