@@ -3,6 +3,9 @@
 En la presente plataforma, se expondrá, a modo de bitácora, los apuntes y proyectos realizados en el curso del **Taller Complementario Electrónica Digital**.
 
 ## Semana 01
+
+*** En este caso, no hay comentarios al respecto de la Clase 01, debido a que no estaba registrado aún en el curso ***
+
 ### Encargo 01
 "Crear su repositorio en GitHub. Incluir información sobre algún referente que se relaciones a lo que les interese trabajar en el curso. Si no tengo ninguno claro, puedo investigar en repositorio como: Proyecto IDIS, el libro Inventar el Futuro de Edward Shanken, etc."
 
