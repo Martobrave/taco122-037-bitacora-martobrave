@@ -37,3 +37,7 @@ Char letra = ‘a’;
 En este caso, el texto dentro del () de print no requiere las comillas porque en char, se utilizó la función para la letra a entre apostrofes. En este caso, una variable guarda una información. Char guarda letras, de a una a la vez.
 La sintaxis de char 
 
+* Falta terminar de traspasar los apuntes del cuaderno a acá, mientras tanto, se encuentra listo el encargo 03 *
+
+## **[Encargo 03](https://github.com/Martobrave/taco122-037-bitacora-martobrave/tree/9b2d20f1b3fa31d52aea0f97896e5b7548773a5c/Semana%2002/Encargo%2003)**
+
