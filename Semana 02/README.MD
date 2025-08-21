@@ -39,5 +39,5 @@ La sintaxis de char
 
 * Falta terminar de traspasar los apuntes del cuaderno a acá, mientras tanto, se encuentra listo el encargo 03 *
 
-## **[Encargo 03](https://github.com/Martobrave/taco122-037-bitacora-martobrave/tree/9b2d20f1b3fa31d52aea0f97896e5b7548773a5c/Semana%2002/Encargo%2003)**
+## **[Encargo 03](https://github.com/Martobrave/taco122-037-bitacora-martobrave/tree/1746397ff3f1b734af1b5e559a47816d6f0f404b/Semana%2002/Encargo%2003)**
 
