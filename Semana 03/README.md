@@ -173,13 +173,9 @@ Serial.println("me prendi");
   digitalWrite(ledPin,LOW);
 
   delay(separador);
-digitalWrite(ledPin,HIGH);
-Serial.println("raya");
-delay(tiempoRaya);
-digitalWrite(ledPin,LOW);
+
 }
 ```
 
-****** Revisar video porque no me sale*******
-
+##Encargo 04
 Encargo, escribir un texto con morse.
