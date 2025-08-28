@@ -6,4 +6,4 @@ En la presente plataforma, se expondrá, a modo de bitácora, los apuntes y proy
 
 ### [Semana 02](https://github.com/Martobrave/taco122-037-bitacora-martobrave/blob/a17bea56891746a44f67a5ed1641bc3734db6e46/Semana%2002/README.MD)
 
-### [Semana 03](https://github.com/Martobrave/taco122-037-bitacora-martobrave/blob/12f79bc93f2f3b0ae6efc3b041bb8e0a717efe11/Semana%2003/README.md)
+### [Semana 03](https://github.com/Martobrave/taco122-037-bitacora-martobrave/tree/acecea05ef15790bd928e4bb3836ebbe611d6637/Semana%2003)
