@@ -312,3 +312,22 @@ analogWrite(ledPin,intensidadLuz);
 
 }
 ```
+
+## Encargo 05
+
+Van a usar la estructura if para alterar el brillo del led a otros comportamientos. Por ejemplo, si el potenciometro mide hasta 100, que la intensidad sea maxima, si mide entre 100 y 500, que sea intensidad media, etc.
+
+Ejemplo:
+
+```
+if (valorPot < 100)
+    {
+    	intensidadLed = 255;
+    } 
+  
+  	if (valorPot >= 100 && valorPot < 200)
+    {
+    	intensidadLed = 255;
+    } 
+```
+
