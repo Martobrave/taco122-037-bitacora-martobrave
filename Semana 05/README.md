@@ -334,3 +334,10 @@ void loop() {
 
 ## Encargo 06
 
+Correspondiente a la Nota 1:
+
+Construir en una pantalla OLED una proyección de una frase que se adapte a lo largo del tiempo. Puede ser utilizando imágenes, scroll, palabra por palabra, etc. Ayudarse de arrays y ciclos for para incorporar palabras.
+La próxima semana (11 de septiembre) es posible que la clase se de vía online, donde revisaremos cada bitácora
+La primera nota también tiene un porcentaje de todos los encargos hasta ahora
+
+
