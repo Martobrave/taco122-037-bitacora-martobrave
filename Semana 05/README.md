@@ -96,24 +96,56 @@ void setup() {
     Serial.println(numerosLost[i]);
     delay(100);
   }
-  Serial.println("salí del ciclo for");
 
 }
 
 void loop() {
-
-  Serial.println("entré al loop");
 
   Serial.println("entré al for");
   for (int i = 0; i < 7; i++ ){
     Serial.println(lineasPoema[i]);
     delay(1000);
   }
-  Serial.println("salí del for");
 
 }
 
 ```
+Cada línea del poema (verso) tiene que empezar con comillas, terminar con comillas y una coma, debido a que los array se separa en comas.
+
+Sacando toda la info del numerosLost y solo dejando al poema sólo, queda:
+
+```
+String lineasPoema[] = 
+{
+  "Señor",
+  "La jaula se ha vuelto pájaro",
+  "y se ha volado",
+  "y mi corazón está loco",
+  "porque aúlla a la muerte",
+  "y sonríe detrás del viento",
+  "a mis delirios",
+};
+
+void setup() {
+  Serial.begin(9600);
+
+}
+
+void loop() {
+
+  for (int i = 0; i < 7; i++ ){
+    Serial.println(lineasPoema[i]);
+    delay(2000);
+  }
+
+}
+```
+Se coloca i como menor que 7. ya que hasta ahí llegan las cantidades de versos del poema (considerando que la primera línea parte siendo un 0).
+
+Para colocar la librería Adafruit correspondiente a mi led, se coloca arriba del set up:
+
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
 
 Para ocupar la pantalla Led 096:
 
