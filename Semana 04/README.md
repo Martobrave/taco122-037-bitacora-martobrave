@@ -331,3 +331,4 @@ if (valorPot < 100)
     } 
 ```
 
+### **[Encargo 05](https://github.com/Martobrave/taco122-037-bitacora-martobrave/blob/eea3e69bcba761ce8babb41ecb5551c0a91f79c7/Semana%2004/Encargo05taco.ino)**
