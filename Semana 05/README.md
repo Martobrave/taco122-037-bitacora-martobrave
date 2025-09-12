@@ -372,4 +372,4 @@ Construir en una pantalla OLED una proyección de una frase que se adapte a lo l
 La próxima semana (11 de septiembre) es posible que la clase se de vía online, donde revisaremos cada bitácora
 La primera nota también tiene un porcentaje de todos los encargos hasta ahora
 
-
+**[Encargo 06](https://github.com/Martobrave/taco122-037-bitacora-martobrave/blob/2b517c5eb83ed0af699dfe1dd9edb346624d9b25/Semana%2005/Nota01taco.ino)**
