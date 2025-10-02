@@ -148,6 +148,120 @@ void loop()
 
 ```
 
-Para hacer la unión con el processing:
+Para hacer la unión con el processing, lo que hice en la clase, corresponde a 
+
+ARDUINO:
+
+```
+
+const int pinCLK = 2;
+const int pinDT = 3;
+
+int lastCLKState;
+int currentLine = 0;
+
+const int numLines = 16;
+
+// Poema almacenado en Arduino
+String poema[numLines] = {
+  "Dar vueltas una y otra vez",
+  "y volver siempre al mismo lugar.",
+  "Dar vueltas y no saber que hacer.",
+  "Tomar decisiones sin sentido",
+  "dentro de un espiral infinito.",
+ 
+  "El mundo gira en direccion opuesta.",
+  "Los opuestos nunca se atraen.",
+  "Quien diga lo contrario esta mintiendo.",
+  "Y quien miente dice la verdad.",
+  "Engañamos para mostrar lo que realmente somos.",
+ 
+  "Estudiamos para no saber nada.",
+  "La ignorancia nos acompaña toda la vida.",
+  "Aprendemos a quererla con el tiempo.",
+  "Para no vomitar cuando giramos. ",  
+  "Para creer que cada vuelta es distinta.",
+
+" Helice - Enrique Jorquera, Santiago, Chile (2021)",
+};
+
+void setup() {
+  pinMode(pinCLK, INPUT);
+  pinMode(pinDT, INPUT);
+  Serial.begin(9600);
+  lastCLKState = digitalRead(pinCLK);
+
+  // Mostrar primera línea
+  Serial.println(poema[currentLine]);
+}
+
+void loop() {
+  int currentCLKState = digitalRead(pinCLK);
+
+  if (currentCLKState != lastCLKState) {
+    if (digitalRead(pinDT) != currentCLKState) {
+      currentLine++;
+    } else {
+      currentLine--;
+    }
+
+    // Hacer que el índice del poema sea cíclico
+    currentLine = (currentLine + numLines) % numLines;
+
+    // Enviar línea correspondiente
+    Serial.println(poema[currentLine]);
+  }
+
+  lastCLKState = currentCLKState;
+}
+
+```
+
+Y en PROCESSING:
+
+```
+
+import processing.serial.*;
+
+Serial myPort;
+String lineaActual = "";
+
+void setup() {
+  size(800, 400);
+  printArray(Serial.list()); // Muestra los puertos disponibles
+  myPort = new Serial(this, Serial.list()[0], 9600); // Asegúrate que el índice es correcto
+  myPort.bufferUntil('\n');
+  textAlign(CENTER, CENTER);
+  textSize(24);
+}
+
+void draw() {
+  background (mouseY);
+  ellipse(224, 184, 500, 500);
+  ellipse(224, 184, 350, 350);
+  ellipse(224, 184, 280, 280);
+ellipse(224, 184, 220, 220);
+fill(mouseY);
+ellipse(224, 184, 180, 180);
+
+fill(255,0,0);
+
+  text(lineaActual, width / 2, height / 2);
+  
+  fill(41,114,51);
+
+    fill(mouseY);
+}
+
+void serialEvent(Serial myPort) {
+  String received = myPort.readStringUntil('\n');
+  if (received != null) {
+    lineaActual = trim(received);
+  }
+}
+
+```
+
+
 
 
