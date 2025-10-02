@@ -4,7 +4,9 @@ Se usará Encoder rotatorio. Con sus sistema, se puede saber cuando giro (si hub
 
 Se descarga la librería RotaryEncoder.
 
-Se utilizan el codigo en arduino: ```
+Se utilizan el codigo en arduino: 
+
+```
 
 //examples, rotatoryEncoder, AceleraterRotator
 
