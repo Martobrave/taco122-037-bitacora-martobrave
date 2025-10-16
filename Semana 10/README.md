@@ -66,3 +66,288 @@ Y para hacer que se encuentren sobre el % entre 0 y 100, se busca lo mismo pero 
 
 Latitud y longitud normalizada. =(d2*100/$max)
 
+Como processing está en inglés, se reemplazan las comas por puntos. (los flows los lee con puntos)
+
+Se descarga con CSV.
+
+Estará en la Clase 10 el descargado.
+
+Header entre parewntesis para ignorar el encabezado, solo queremos los numeros valores
+
+Da 3229 filas, ignorando el header.
+
+Para saber el valor en una fila específica:
+
+```
+
+Table recorridoGabi;
+
+void setup() {
+size(200,200);
+background(255);
+
+recorridoGabi = loadTable("hojaProcesada.csv", "header");
+
+println("filas y columnas: ");
+println(recorridoGabi.getRowCount());
+println(" y ");
+println(recorridoGabi.getColumnCount());
+
+print("en la celda (0,0) está el valor:");
+println(recorridoGabi.getFloat(0,0));
+
+}
+void draw()  {
+  
+  }
+
+```
+
+Y para el valor de la otra columna;
+
+```
+Table recorridoGabi;
+
+void setup() {
+size(200,200);
+background(255);
+
+recorridoGabi = loadTable("hojaProcesada.csv", "header");
+
+println("filas y columnas: ");
+println(recorridoGabi.getRowCount());
+println(" y ");
+println(recorridoGabi.getColumnCount());
+
+print("en la celda (0,0) está el valor:");
+println(recorridoGabi.getFloat(0,0));
+
+print("en la celda (0,1) está el valor:");
+println(recorridoGabi.getFloat(0,1));
+
+}
+void draw()  {
+  
+  }
+```
+
+Para un pequeño circulo
+
+```
+
+Table recorridoGabi;
+
+void setup() {
+size(200,200);
+background(255);
+
+recorridoGabi = loadTable("hojaProcesada.csv", "header");
+
+println("filas y columnas: ");
+println(recorridoGabi.getRowCount());
+println(" y ");
+println(recorridoGabi.getColumnCount());
+
+print("en la celda (0,0) está el valor:");
+println(recorridoGabi.getFloat(0,0));
+
+print("en la celda (0,1) está el valor:");
+println(recorridoGabi.getFloat(0,1));
+
+}
+void draw()  {
+  
+  circle(width/2,height/2,2);
+  
+  
+  }
+```
+
+```
+
+Table recorridoGabi;
+
+int contadorX=0;
+int contadorY=0;
+
+
+float posicionX = 0;
+float posicionY = 0;
+
+
+float posicionXMap=0;
+float posicionYMap=0;
+
+void setup() {
+size(300,300);
+background(255);
+
+recorridoGabi = loadTable("hojaProcesada.csv", "header");
+
+println("filas y columnas: ");
+println(recorridoGabi.getRowCount());
+println(" y ");
+println(recorridoGabi.getColumnCount());
+
+print("en la celda (0,0) está el valor:");
+println(recorridoGabi.getFloat(0,0));
+
+print("en la celda (0,1) está el valor:");
+println(recorridoGabi.getFloat(0,1));
+
+}
+void draw()  {
+  
+  contadorX++;
+  contadorY++;
+
+  
+  posicionX = recorridoGabi.getFloat(contadorX,1);
+  posicionY = recorridoGabi.getFloat(contadorY,0);
+  
+  posicionXMap = map(posicionX,0,100,0,width);
+   posicionYMap = map(posicionY,0,100,height,0);
+  
+    circle(posicionXMap,posicionYMap,2);
+  
+  if (contadorX >= recorridoGabi.getRowCount()){
+  contadorX = 0;
+  }
+  
+  if (contadorY >= recorridoGabi.getRowCount()){
+  contadorY = 0;
+  }
+  
+  }
+```
+
+```
+
+Table recorridoGabi;
+
+int contadorX=0;
+int contadorY=0;
+
+
+float posicionX = 0;
+float posicionY = 0;
+
+
+float posicionXMap=0;
+float posicionYMap=0;
+
+int direccionX = 1;
+int direccionY = 1;
+
+void setup() {
+size(300,300);
+background(2);
+
+recorridoGabi = loadTable("hojaProcesada.csv", "header");
+
+println("filas y columnas: ");
+println(recorridoGabi.getRowCount());
+println(" y ");
+println(recorridoGabi.getColumnCount());
+
+print("en la celda (0,0) está el valor:");
+println(recorridoGabi.getFloat(0,0));
+
+print("en la celda (0,1) está el valor:");
+println(recorridoGabi.getFloat(0,1));
+
+}
+void draw()  {
+  
+ 
+  
+  contadorX = contadorX + 1 * direccionX;
+  contadorY = contadorY + 1 * direccionY;
+
+  
+  posicionX = recorridoGabi.getFloat(contadorX,1);
+  posicionY = recorridoGabi.getFloat(contadorY,0);
+  
+  posicionXMap = map(posicionX,0,100,0,width);
+   posicionYMap = map(posicionY,0,100,height,0);
+  
+    circle(posicionXMap,posicionYMap,20);
+  
+  if (contadorX >= recorridoGabi.getRowCount()){
+  direccionX = -1;
+  }
+  
+  if (contadorY >= recorridoGabi.getRowCount()){
+  direccionY = -1;
+  }
+  
+  }
+
+```
+
+En background, el primeri numero es el fondo, y el segundo es la opacidad
+
+```
+
+Table recorridoGabi;
+
+int contadorX=0;
+int contadorY=0;
+
+
+float posicionX = 0;
+float posicionY = 0;
+
+
+float posicionXMap=0;
+float posicionYMap=0;
+
+int direccionX = 1;
+int direccionY = 1;
+
+void setup() {
+size(300,300);
+background(255, 100);
+
+recorridoGabi = loadTable("hojaProcesada.csv", "header");
+
+println("filas y columnas: ");
+println(recorridoGabi.getRowCount());
+println(" y ");
+println(recorridoGabi.getColumnCount());
+
+print("en la celda (0,0) está el valor:");
+println(recorridoGabi.getFloat(0,0));
+
+print("en la celda (0,1) está el valor:");
+println(recorridoGabi.getFloat(0,1));
+
+}
+void draw()  {
+  
+background(255, 10);
+  
+  contadorX = contadorX + 1 * direccionX;
+  contadorY = contadorY + 1 * direccionY;
+
+  
+  posicionX = recorridoGabi.getFloat(contadorX,1);
+  posicionY = recorridoGabi.getFloat(contadorY,0);
+  
+  posicionXMap = map(posicionX,0,100,0,width);
+   posicionYMap = map(posicionY,0,100,height,0);
+  
+  fill(0);
+    circle(posicionXMap,posicionYMap,10);
+  
+  if (contadorX >= recorridoGabi.getRowCount()){
+  direccionX = -1;
+  }
+  
+  if (contadorY >= recorridoGabi.getRowCount()){
+  direccionY = -1;
+  }
+  
+  }
+
+```
