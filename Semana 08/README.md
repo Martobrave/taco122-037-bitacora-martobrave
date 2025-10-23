@@ -318,4 +318,4 @@ void loop() {
 Con un acoplamiento flexible, se le puede colocar un motor por un lado y por el otro un disco, o lo que se le quiera montar.
 
 
-# Encargo Semana 08
+# [**Encargo Semana 08**](https://github.com/Martobrave/taco122-037-bitacora-martobrave/tree/87545f26c50f7c1454bfc08b9d073abc4c8a858d/Semana%2008/Encargo%20Semana%2008)
