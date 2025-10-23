@@ -8,6 +8,17 @@ Para clase subsiguiente, traer un proyecto bien articulado, que incorpore concep
 
 Encargo:
 
+Obras de referencia:
+
+1. [**Propagaciones (2007)**](https://proyectoidis.org/leo-nunez/)
+
+Entre sus obras más destacadas del artista Leo Nuñez, se puede mencionar a ***Propagaciones (2007)***, un sistema de autómatas celulares formados por cincuenta robots que se ponen en movimiento con ***estímulos lumínicos***.
+
+2. [**Tensión superficial**](https://proyectoidis.org/rafael-lozano-hemmer)
+
+Instalación interactiva donde la imagen de un ojo humano gigante sigue al espectador con precisión. 
+
+3. 
 
 
 Ideas para la subsiguiente semana para el anteproyecto:
@@ -32,6 +43,13 @@ Idea 4:
 
 En caso de que se requiera un fierro que atraviese todo el zoótropo por la mitad (por estabilidad del giro), ya no se podría ver la animación de la pantallita LED al otrop lado del zoótropo, en ese caso se coloca la pantallita por encima del zooótropo y por varios pequeños vidrios dentro del zoótropo, se vería el reflejo de ellos.
 
+Idea 5:
+
+Se puede modificar el sensor de distancia a uno lumínico, donde el espectador tendrá que usar una linterna, y mientras más cerca esté la luz del sensor, más potencia tendrá, por lo que el zoótropo se moverá con mayor velocidad (de esta forma, es más análogo más que un bool).
+
+Idea 6:
+
+Una de las pantalla LCD o de TV no muestre una imagen en movimiento, si no que, con una cámara en cierto ángulo en el techo de la sala, el espectador pueda verde mirando los zoótropos desde otro punto de vista, haciendo la experiencia más inmersiva.
 
 [Sketch bool sensor de distancia arduino](https://github.com/TechKrowd/37in1KitArduino/blob/15beabe79e1089883d381c95c3c52b3e703c4af5/ky032.ino)
 ky032.ino
