@@ -31,3 +31,6 @@ Cinco zoótropos se encontrarán en un circulo, mirando hacia afuera los sensore
 Idea 4:
 
 En caso de que se requiera un fierro que atraviese todo el zoótropo por la mitad (por estabilidad del giro), ya no se podría ver la animación de la pantallita LED al otrop lado del zoótropo, en ese caso se coloca la pantallita por encima del zooótropo y por varios pequeños vidrios dentro del zoótropo, se vería el reflejo de ellos.
+
+
+[Sketch pool sensor de distancia arduino](ky032.ino)
