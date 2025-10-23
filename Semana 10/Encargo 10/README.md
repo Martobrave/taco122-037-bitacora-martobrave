@@ -16,9 +16,7 @@ Entre sus obras más destacadas del artista Leo Nuñez, se puede mencionar a ***
 
 2. [**Tensión superficial**](https://proyectoidis.org/rafael-lozano-hemmer)
 
-Instalación interactiva donde la imagen de un ojo humano gigante sigue al espectador con precisión. 
-
-3. 
+Instalación interactiva, del artista Rafael Lozano-Hemmer, donde la imagen de un ojo humano gigante sigue al espectador con precisión. 
 
 
 Ideas para la subsiguiente semana para el anteproyecto:
@@ -29,7 +27,7 @@ Título: "Zoótropo eléctrico"-
 
 Idea 1:
 
-A través de un sensor de distancia, de forma análoga y creciente al acercarse a un zoótropo que se encontrará en posición vertical, este empezará a girar de forma acelerada mientras más cerca se encuentre de él, con una pequeña ampolleta en su interior para dar la visual de que tiene los orificios rectangulares de un zoótropo. De este zoótropo saldrán cables que llegarán a unas pantallas de TV pequeñas, 5 para una composición armoniosa. Cada panatalla se mostrará una imagen o texto, el cual quedará estático mientras el zoótropo no se mueva. A medida que el espectador se vaya acercando al zoótropo y este girando lentamente, las imágenes en las pantallas irán en lento mivimiento (cambios de fotogramas), hasta que el zoótropo se encuentre con una velocidad giratoria máxima y constante, formando en cada pantalla una animación fluida.
+A través de un sensor de distancia, de forma análoga y creciente al acercarse a un zoótropo que se encontrará en posición vertical, este empezará a girar (motor) de forma acelerada mientras más cerca se encuentre de él, con una pequeña ampolleta en su interior para dar la visual de que tiene los orificios rectangulares de un zoótropo. De este zoótropo saldrán cables que llegarán a unas pantallas de TV pequeñas, 5 para una composición armoniosa. Cada panatalla se mostrará una imagen o texto, el cual quedará estático mientras el zoótropo no se mueva. A medida que el espectador se vaya acercando al zoótropo y este girando lentamente, las imágenes en las pantallas irán en lento mivimiento (cambios de fotogramas), hasta que el zoótropo se encuentre con una velocidad giratoria máxima y constante, formando en cada pantalla una animación fluida.
 
 Idea 2:
 
