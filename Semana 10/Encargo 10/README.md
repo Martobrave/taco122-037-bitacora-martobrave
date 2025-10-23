@@ -26,12 +26,12 @@ En vez de pantallas de Tv pequeñas, que sean muchas pequeñas pantallas LED, qu
 
 Idea 3:
 
-Cinco zoótropos se encontrarán en un circulo, mirando hacia afuera los sensores, con el fin de que cuando el espectador se acerque a ver, solo se moverá uno, y solo esa animación será la que se verá (los 5 serán independientes). En este caso, no se requiere que el sensor sea análogo, con que se encienda y apague con la presencia del espectador (formato pool) serviría para hacerlo girar, ya que el espectador tendrá que acercarse al zoótropo para ver la pantalla LED que se encontrará del otro lado del zoótropo, y así ver la animación que se produce al hacer girar el sistema.
+Cinco zoótropos se encontrarán en un circulo, mirando hacia afuera los sensores, con el fin de que cuando el espectador se acerque a ver, solo se moverá uno, y solo esa animación será la que se verá (los 5 serán independientes). En este caso, no se requiere que el sensor sea análogo, con que se encienda y apague con la presencia del espectador (formato bool) serviría para hacerlo girar, ya que el espectador tendrá que acercarse al zoótropo para ver la pantalla LED que se encontrará del otro lado del zoótropo, y así ver la animación que se produce al hacer girar el sistema.
 
 Idea 4:
 
 En caso de que se requiera un fierro que atraviese todo el zoótropo por la mitad (por estabilidad del giro), ya no se podría ver la animación de la pantallita LED al otrop lado del zoótropo, en ese caso se coloca la pantallita por encima del zooótropo y por varios pequeños vidrios dentro del zoótropo, se vería el reflejo de ellos.
 
 
-[Sketch pool sensor de distancia arduino](https://github.com/TechKrowd/37in1KitArduino/blob/15beabe79e1089883d381c95c3c52b3e703c4af5/ky032.ino)
+[Sketch bool sensor de distancia arduino](https://github.com/TechKrowd/37in1KitArduino/blob/15beabe79e1089883d381c95c3c52b3e703c4af5/ky032.ino)
 ky032.ino
