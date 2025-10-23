@@ -318,4 +318,4 @@ void loop() {
 Con un acoplamiento flexible, se le puede colocar un motor por un lado y por el otro un disco, o lo que se le quiera montar.
 
 
-
+# Encargo Semana 08
