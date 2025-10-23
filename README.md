@@ -12,8 +12,8 @@ En la presente plataforma, se expondrá, a modo de bitácora, los apuntes y proy
 
 ### [Semana 05](https://github.com/Martobrave/taco122-037-bitacora-martobrave/tree/4f935395a8a5c611507293df4a864b705ffabc9e/Semana%2005)
 
-###
-
-###
+### [Semana 06]
 
 ### [Semana 08](https://github.com/Martobrave/taco122-037-bitacora-martobrave/tree/1c9f02252935b691f656baad406a62e2e212fc6d/Semana%2008)
+
+### [Semana 10]
