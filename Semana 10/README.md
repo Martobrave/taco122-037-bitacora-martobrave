@@ -352,4 +352,4 @@ background(255, 10);
 
 ```
 
-## [***Encargo Semana 10***]
+## [***Encargo Semana 10***](https://github.com/Martobrave/taco122-037-bitacora-martobrave/tree/2fe7251a2b113c2eb62984a5e25980ab081ceb7b/Semana%2010/Encargo%2010)
