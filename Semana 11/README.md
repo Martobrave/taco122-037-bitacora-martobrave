@@ -19,3 +19,6 @@ Motorreductor con llanta de goma, puede hacer girar desde afuera. 125 rpm minimo
 Traer sensor ultrasonico, y el tema del motor con un zootropo resuelto para la siguiente clase.
 
 Comprar también un Relé de 01 Canal, el cual permite juntar los cables de cobre de algun circuito con el arduino.
+
+
+# Encargo Semana 11
