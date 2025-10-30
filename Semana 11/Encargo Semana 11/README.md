@@ -13,14 +13,29 @@ En una habitación oscura, o en un pasillo que se encuentre oscuro, al fondo se 
 Esto permitirá tener una experiencia inmersiva al espectador de un zootrópo convencional formal (físico), un zo+otropo elétrico al cambiar las imágenes de la cámara, y un zoótropo humano en el mismo espectador.
 
 Materiales:
-1 x Placa UNO compatible
+1 x Placa UNO compatible Arduino
+
 1 x Sensor de Ultrasonico HC-SR04
+
 1 x Protoboard de 400 puntos
+
 1 x Cable USB
+
 1 x Motor (por ver)
+
 1 x Pantalla LCD Oled Azul y Amarillo 0,96
+
 3 x Pantallas TV (por ver)
 
 Diagrama de Flujo:
+
+Hardware:
+Placa UNO compatible Arduino
+
+Software:
+Arduino IDE
+
+Boceto de la instalación:
+
 
 
