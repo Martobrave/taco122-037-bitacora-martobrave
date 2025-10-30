@@ -43,5 +43,6 @@ Arduino IDE
 
 Boceto de la instalación:
 
+![Boceto 1](Notes_251030_124429_1.jpg)
 
-
+![Boceto 2](Notes_251030_124429_2.jpg)
