@@ -27,6 +27,10 @@ Materiales:
 
 3 x Pantallas TV (por ver)
 
+* Tengo por el momento 1 pantalla pequeña, para ver como utilizarla según las conexiones que se le permiten:
+  ![Imagen TV 1](TV 1.jpg).
+  ![Imagen TV 2](TV 2.jpg).
+
 Diagrama de Flujo:
 
 Hardware:
