@@ -21,4 +21,4 @@ Traer sensor ultrasonico, y el tema del motor con un zootropo resuelto para la s
 Comprar también un Relé de 01 Canal, el cual permite juntar los cables de cobre de algun circuito con el arduino.
 
 
-# Encargo Semana 11
+# [Encargo Semana 11](https://github.com/Martobrave/taco122-037-bitacora-martobrave/tree/c110fb535f0c1dab3244ea214c0df737d5fdc5e0/Semana%2011/Encargo%20Semana%2011)
