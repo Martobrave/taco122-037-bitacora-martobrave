@@ -157,18 +157,30 @@ void loop() {
 ```
 
 Utilizando abora las conexiones de Sensor Ultrasónico en el arduino;
+
 VCC → Pin 5V del Arduino.
+
 GND → Pin GND del Arduino.
+
 Trig → Pin digital 9 del Arduino.
+
 Echo → Pin digital 10 del Arduino
 
+
 Las conexiones del controlador L298N con el arduino;
+
 VCC → Pin 5V del Arduino.
+
 GND → Pin GND del Arduino.
+
 ENA → Pin digital 11 del Arduino (necesitas quitar el jumper de ENA en el L298N).
+
 IN1 → Pin digital 7 del Arduino.
+
 IN2 → Pin digital 8 del Arduino.
+
 OUT1 y OUT2 → Conecta las dos patillas del motorreductor.
+
 +12V (o el voltaje de tu fuente de poder) → Terminal positivo de tu fuente de alimentación externa.
 GND → Terminal negativo de tu fuente de alimentación externa.
 
