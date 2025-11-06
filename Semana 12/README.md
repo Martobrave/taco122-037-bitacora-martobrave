@@ -185,3 +185,144 @@ OUT1 y OUT2 → Conecta las dos patillas del motorreductor.
 GND → Terminal negativo de tu fuente de alimentación externa.
 
 
+Por último, se crea código, utilizando el Relé de 1 canal, y usando también procesing para tener una imagen pixeleada, que al acercarse, mejore su resolución.
+
+Código arduino:
+
+```
+
+// --- Pines del Sensor Ultrasónico ---
+const int pinTrigger = 9;
+const int pinEcho = 10;
+
+// --- Pin de Control del Relé ---
+const int pinRele = 5; 
+
+// Variables para el sensor
+long duracion;
+int distanciaCm;
+int umbralDistancia = 50; // La distancia objetivo en centímetros
+
+void setup() {
+  Serial.begin(9600); // Inicia comunicación serial a 9600 baudios
+  
+  // Configuración de pines
+  pinMode(pinTrigger, OUTPUT);
+  pinMode(pinEcho, INPUT);
+  pinMode(pinRele, OUTPUT);
+  
+  // Apagar el motor al inicio
+  digitalWrite(pinRele, LOW); 
+}
+
+void loop() {
+  // --- Lectura del Sensor Ultrasónico ---
+  digitalWrite(pinTrigger, LOW);
+  delayMicroseconds(2);
+  digitalWrite(pinTrigger, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(pinTrigger, LOW);
+  duracion = pulseIn(pinEcho, HIGH);
+  distanciaCm = duracion / 58;
+
+  // --- Lógica de Control y Comunicación Serial ---
+  if (distanciaCm < umbralDistancia) {
+    digitalWrite(pinRele, HIGH); 
+    Serial.println("A"); // Enviar "A" cuando el motor está ENCENDIDO (cerca)
+  } else {
+    digitalWrite(pinRele, LOW);
+    Serial.println("B"); // Enviar "B" cuando el motor está APAGADO (lejos)
+  }
+
+  // Puedes descomentar estas líneas para depurar en el monitor serial
+  /*
+  Serial.print("Distancia actual: ");
+  Serial.print(distanciaCm);
+  Serial.print(" cm -> Señal enviada: ");
+  if (distanciaCm < umbralDistancia) {
+      Serial.println("A");
+  } else {
+      Serial.println("B");
+  }
+  */
+
+  delay(100); // Pequeña pausa para estabilizar las lecturas y la comunicación
+}
+
+```
+
+Y en Processing:
+
+```
+
+import processing.serial.*;
+import processing.video.*;
+
+Serial myPort;        // El objeto puerto serie
+Capture cam;          // El objeto cámara
+String estadoMotor = "B"; // Estado inicial: Pixelado (B de Baja resolución)
+
+// Variables para el efecto de pixelado
+int factorPixeladoBajo = 40; 
+int factorPixeladoAlto = 1; // 1 significa sin pixelado (definida)
+int factorPixeladoActual;
+
+void setup() {
+  size(640, 480); // Tamaño de la ventana de visualización
+
+  // Iniciar la cámara
+  cam = new Capture(this, width, height);
+  cam.start();
+
+  // Iniciar la comunicación serial
+  // Reemplaza "COM3" con el puerto correcto de tu Arduino
+  String portName = Serial.list()[0]; // Intenta usar el primer puerto disponible
+  // Si tienes problemas, usa: myPort = new Serial(this, "COM3", 9600);
+  myPort = new Serial(this, "COM4", 9600);
+}
+
+void draw() {
+  if (cam.available()) {
+    cam.read(); // Leer nuevo frame de la cámara
+  }
+  
+  image(cam, 0, 0); // Mostrar la imagen completa primero
+
+  // --- Lógica del Pixelado ---
+  if (estadoMotor.equals("A")) {
+    factorPixeladoActual = factorPixeladoAlto; // Motor girando: imagen definida
+  } else {
+    factorPixeladoActual = factorPixeladoBajo; // Motor apagado: imagen pixelada
+  }
+
+  // Aplicar el efecto de pixelado
+  // Si el factor es 1, este bucle no hace nada visible, que es lo que queremos.
+  for (int i = 0; i < width; i += factorPixeladoActual) {
+    for (int j = 0; j < height; j += factorPixeladoActual) {
+      // Obtener el color promedio del bloque
+      int loc = i + j * cam.width;
+      color c = cam.pixels[loc];
+      
+      // Dibujar un rectángulo grande con ese color
+      noStroke();
+      fill(c);
+      rect(i, j, factorPixeladoActual, factorPixeladoActual);
+    }
+  }
+}
+
+// Función que se activa cada vez que Arduino envía datos seriales
+void serialEvent(Serial myPort) {
+  // Leer los datos del puerto serie (debería ser "A" o "B")
+  String inString = myPort.readStringUntil('\n');
+  if (inString != null) {
+    inString = trim(inString); // Limpiar espacios en blanco
+    if (inString.equals("A") || inString.equals("B")) {
+      estadoMotor = inString; // Actualizar el estado del motor
+      println("Recibido de Arduino: " + estadoMotor);
+    }
+  }
+}
+
+```
+
