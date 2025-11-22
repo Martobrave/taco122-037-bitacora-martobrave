@@ -180,6 +180,7 @@ void loop() {
 Código Processing:
 
 ```
+
 import processing.serial.*;
 import processing.video.*;
 
@@ -188,50 +189,46 @@ Capture cam;         // El objeto de captura de video
 int dist = 0;        // Variable para almacenar la distancia recibida
 
 // Variables para controlar la pixelización
-int minPixelSize = 1;  // Tamaño de píxel mínimo (alta resolución)
-int maxPixelSize = 40; // Tamaño de píxel máximo (muy pixelado)
+int minPixelSize = 1;  // Tamaño de píxel mínimo (alta resolución/cerca)
+int maxPixelSize = 40; // Tamaño de píxel máximo (muy pixelado/lejos)
 int pixelSize = 1;     // Tamaño de píxel actual
 
+// Definimos los umbrales para nuestro efecto
+int umbralCerca = 10; // Distancia mínima para máxima resolución (1)
+int umbralLejos = 60; // Distancia máxima para máxima pixelación (40)
+
 void setup() {
-  size(640, 480); 
+  fullScreen(); 
   
-  // Imprime los puertos seriales disponibles en la consola de Processing
+  // Imprime los puertos seriales disponibles en la consola (útil para depurar)
   println(Serial.list());
   
-  // *** LÍNEA CORREGIDA ***
-  // Selecciona el primer puerto de la lista usando [0]
+  // --- LÍNEA CORREGIDA AHORA SÍ ---
+  // Accede al PRIMER elemento del array (índice [0]) para obtener un solo String
   String portName = Serial.list()[0]; 
   myPort = new Serial(this, portName, 9600);
 
-  // Inicializa la cámara
-  cam = new Capture(this, 640, 480);
+  cam = new Capture(this, displayWidth, displayHeight);
   cam.start();
 }
 
 void draw() {
   if (cam.available()) {
-    cam.read(); // Lee el nuevo frame de la cámara
+    cam.read();
   }
   
-  // Aseguramos que el fondo se limpie en cada frame
   background(0);
 
-  // --- Aplica el efecto de espejo (volteo horizontal) ---
-  
-  pushMatrix();          // Guarda la configuración de dibujo actual
-  translate(cam.width, 0); // Mueve el origen al lado derecho de la imagen (X=640)
-  scale(-1, 1);          // Invierte la escala horizontalmente (crea el espejo)
-  
-  // Aplica el efecto de pixelización dinámico.
-  // Como estamos volteados, dibujamos en la posición X=0
+  pushMatrix();
+  translate(width, 0);
+  scale(-1, 1);
   applyPixelEffect(0); 
-  
-  popMatrix();           // Restaura la configuración original
+  popMatrix();
 
-  // Muestra la distancia en pantalla (opcional)
   fill(255);
   textSize(24);
   text("Distancia: " + dist + " cm", 10, 30);
+  text("Pixel Size: " + pixelSize, 10, 60);
 }
 
 void serialEvent(Serial myPort) {
@@ -241,22 +238,21 @@ void serialEvent(Serial myPort) {
     inString = trim(inString);
     dist = int(inString);
     
-    // Mapeo para el efecto pixelado
-    pixelSize = (int)map(dist, 0, 200, minPixelSize, maxPixelSize);
-    if (pixelSize < 1) pixelSize = 1;
+    // Mapeo refinado y gradual
+    pixelSize = (int)map(dist, umbralCerca, umbralLejos, minPixelSize, maxPixelSize);
+    pixelSize = (int)constrain(pixelSize, minPixelSize, maxPixelSize);
   }
 }
 
-// Función para aplicar el efecto pixelado
 void applyPixelEffect(int startX) {
   if (pixelSize == 1) {
-    image(cam, startX, 0);
+    image(cam, startX, 0, width, height); 
     return;
   }
   
   int step = pixelSize;
-  for (int y = 0; y < cam.height; y += step) {
-    for (int x = 0; x < cam.width; x += step) {
+  for (int y = 0; y < height; y += step) {
+    for (int x = 0; x < width; x += step) {
       color c = cam.get(x, y); 
       noStroke();
       fill(c);
@@ -264,6 +260,7 @@ void applyPixelEffect(int startX) {
     }
   }
 }
+
 
 ```
 
